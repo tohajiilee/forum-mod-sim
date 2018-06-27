@@ -1,0 +1,92 @@
+﻿I'm sorry, but an uncaught exception occurred.
+
+While running game code:
+  File "game/script.rpy", line 38, in script
+    e "burp [e_list]"
+  File "game/new_screen.rpy", line 7, in execute
+    screen new_screen:
+  File "game/new_screen.rpy", line 7, in execute
+    screen new_screen:
+  File "game/new_screen.rpy", line 8, in execute
+    vbox:
+  File "game/new_screen.rpy", line 12, in execute
+    frame:
+  File "game/new_screen.rpy", line 18, in execute
+    hbox:
+  File "game/new_screen.rpy", line 19, in execute
+    vbox:
+  File "game/new_screen.rpy", line 21, in execute
+    frame:
+  File "game/new_screen.rpy", line 25, in execute
+    text "[items[0]]" align (0.5, 0.5)
+NameError: Name 'items' is not defined.
+
+-- Full Traceback ------------------------------------------------------------
+
+Full traceback:
+  File "game/script.rpy", line 38, in script
+    e "burp [e_list]"
+  File "C:\Users\JOEL\Downloads\renpy-7.0.0-sdk\renpy\ast.py", line 652, in execute
+    renpy.exports.say(who, what, interact=self.interact, *args, **kwargs)
+  File "C:\Users\JOEL\Downloads\renpy-7.0.0-sdk\renpy\exports.py", line 1199, in say
+    who(what, *args, **kwargs)
+  File "C:\Users\JOEL\Downloads\renpy-7.0.0-sdk\renpy\character.py", line 1016, in __call__
+    self.do_display(who, what, cb_args=self.cb_args, **display_args)
+  File "C:\Users\JOEL\Downloads\renpy-7.0.0-sdk\renpy\character.py", line 817, in do_display
+    **display_args)
+  File "C:\Users\JOEL\Downloads\renpy-7.0.0-sdk\renpy\character.py", line 566, in display_say
+    rv = renpy.ui.interact(mouse='say', type=type, roll_forward=roll_forward)
+  File "C:\Users\JOEL\Downloads\renpy-7.0.0-sdk\renpy\ui.py", line 287, in interact
+    rv = renpy.game.interface.interact(roll_forward=roll_forward, **kwargs)
+  File "C:\Users\JOEL\Downloads\renpy-7.0.0-sdk\renpy\display\core.py", line 2649, in interact
+    repeat, rv = self.interact_core(preloads=preloads, trans_pause=trans_pause, **kwargs)
+  File "C:\Users\JOEL\Downloads\renpy-7.0.0-sdk\renpy\display\core.py", line 3033, in interact_core
+    root_widget.visit_all(lambda i : i.per_interact())
+  File "C:\Users\JOEL\Downloads\renpy-7.0.0-sdk\renpy\display\core.py", line 511, in visit_all
+    d.visit_all(callback)
+  File "C:\Users\JOEL\Downloads\renpy-7.0.0-sdk\renpy\display\core.py", line 511, in visit_all
+    d.visit_all(callback)
+  File "C:\Users\JOEL\Downloads\renpy-7.0.0-sdk\renpy\display\core.py", line 511, in visit_all
+    d.visit_all(callback)
+  File "C:\Users\JOEL\Downloads\renpy-7.0.0-sdk\renpy\display\screen.py", line 424, in visit_all
+    callback(self)
+  File "C:\Users\JOEL\Downloads\renpy-7.0.0-sdk\renpy\display\core.py", line 3033, in <lambda>
+    root_widget.visit_all(lambda i : i.per_interact())
+  File "C:\Users\JOEL\Downloads\renpy-7.0.0-sdk\renpy\display\screen.py", line 434, in per_interact
+    self.update()
+  File "C:\Users\JOEL\Downloads\renpy-7.0.0-sdk\renpy\display\screen.py", line 619, in update
+    self.screen.function(**self.scope)
+  File "game/new_screen.rpy", line 7, in execute
+    screen new_screen:
+  File "game/new_screen.rpy", line 7, in execute
+    screen new_screen:
+  File "game/new_screen.rpy", line 8, in execute
+    vbox:
+  File "game/new_screen.rpy", line 12, in execute
+    frame:
+  File "game/new_screen.rpy", line 18, in execute
+    hbox:
+  File "game/new_screen.rpy", line 19, in execute
+    vbox:
+  File "game/new_screen.rpy", line 21, in execute
+    frame:
+  File "game/new_screen.rpy", line 25, in execute
+    text "[items[0]]" align (0.5, 0.5)
+  File "C:\Users\JOEL\Downloads\renpy-7.0.0-sdk\renpy\text\text.py", line 1377, in __init__
+    self.set_text(text, scope, substitute)
+  File "C:\Users\JOEL\Downloads\renpy-7.0.0-sdk\renpy\text\text.py", line 1477, in set_text
+    i, did_sub = renpy.substitutions.substitute(i, scope, substitute)
+  File "C:\Users\JOEL\Downloads\renpy-7.0.0-sdk\renpy\substitutions.py", line 242, in substitute
+    s = formatter.vformat(s, (), kwargs)
+  File "/home/tom/ab/x64lucid-deps/install/lib/python2.7/string.py", line 563, in vformat
+  File "/home/tom/ab/x64lucid-deps/install/lib/python2.7/string.py", line 585, in _vformat
+  File "/home/tom/ab/x64lucid-deps/install/lib/python2.7/string.py", line 646, in get_field
+  File "/home/tom/ab/x64lucid-deps/install/lib/python2.7/string.py", line 605, in get_value
+  File "C:\Users\JOEL\Downloads\renpy-7.0.0-sdk\renpy\substitutions.py", line 201, in __getitem__
+    raise NameError("Name '{}' is not defined.".format(key))
+NameError: Name 'items' is not defined.
+
+Windows-8-6.2.9200
+Ren'Py 7.0.0.196
+forummod 1.0
+Tue Jun 26 11:23:25 2018
